@@ -135,3 +135,44 @@ nav ul li a {
     display: flex;
   }
 }
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  transition: left 0.3s ease-in-out;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 10px;
+}
+
+.sidebar-menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-button {
+    display: block;
+  }
+
+  .sidebar {
+    left: -100%;
+  }
+}
