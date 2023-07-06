@@ -4,9 +4,40 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
   padding: 0;
 }
 
+@font-face {
+  font-family: 'Amatic SC';
+  src: url('fonts/Amatic_SC/AmaticSC-Regular.ttf') format('truetype');
+  /* Add additional font files for different font weights and styles if available */
+}
+
+@font-face {
+  font-family: 'Amatic SC';
+  src: url('fonts/Amatic_SC/AmaticSC-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Mignon';
+  src: url('fonts/Mignon-Regular/Mignon-Regular') format('truetype');
+  /* Add additional font files for different font weights and styles if available */
+}
+
+
+@font-face {
+  font-family: 'Mignon';
+  src: url('fonts/Mignon-Regular/Mignon-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Mignon';
+  src: url('fonts/Mignon-Regular/Mignon-It.ttf') format('truetype');
+  font-weight: italic;
+}
+
 /* Add general styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Mignon, sans-serif;
   line-height: 1.5;
 }
 
