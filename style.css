@@ -1,7 +1,81 @@
-/* Reset default styles */
+/* Reset default styles 
 body, h1, h2, h3, h4, h5, h6, p, ul, li {
   margin: 0;
   padding: 0;
+}
+*/
+
+
+/* Add general styles */
+body {
+  font-family: Mignon;
+  background: #080808;
+  line-height: 1.5;
+}
+
+#header{
+  font-family: Amatic SC;
+  font-weight: bold;
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/tramonto.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.container{
+  padding: 10px 3%;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 81px;
+}
+
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10 px 20px;
+}
+
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 25px;
+  position: relative;
+}
+
+nav ul li a::after{
+  content: '';
+  width: 0%;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+  width: 100%;
+}
+
+.header-text{
+  margin-top: 20px;
+  margin-left: 340px;
+  font-size: 30 px;
+}
+
+.header-text h1{
+ font-size: 60 px;
+ margin-top: 20px;
 }
 
 @font-face {
@@ -18,161 +92,19 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
 
 @font-face {
   font-family: 'Mignon';
-  src: url('fonts/Mignon-Regular/Mignon-Regular') format('truetype');
+  src: url('fonts/Mignon-Regular/Mignon-Regular.otf') format('truetype');
   /* Add additional font files for different font weights and styles if available */
 }
 
 
 @font-face {
   font-family: 'Mignon';
-  src: url('fonts/Mignon-Regular/Mignon-Bold.ttf') format('truetype');
+  src: url('fonts/Mignon-Regular/Mignon-Bold.otf') format('truetype');
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'Mignon';
-  src: url('fonts/Mignon-Regular/Mignon-It.ttf') format('truetype');
+  src: url('fonts/Mignon-Regular/Mignon-It.otf') format('truetype');
   font-weight: italic;
-}
-
-/* Add general styles */
-body {
-  font-family: Mignon;
-  line-height: 1.5;
-}
-
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-header {
-  font-family: Amatic SC;
-  font-weight: bold;
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  width: 5px;
-  height: 5px;
-  margin-left: 10px;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  margin-right: 20px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.content {
-  padding: 20px;
-}
-
-.footer {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-}
-
-.menu-icon {
-  display: none;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .menu-icon {
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #fff;
-    font-size: 24px;
-  }
-
-  nav {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #333;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-
-  nav.active {
-    display: flex;
-  }
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100vh;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  transition: left 0.3s ease-in-out;
-}
-
-.sidebar-menu {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar-menu li {
-  margin-bottom: 10px;
-}
-
-.sidebar-menu li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.menu-button {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .menu-button {
-    display: block;
-  }
-
-  .sidebar {
-    left: -100%;
-  }
 }
