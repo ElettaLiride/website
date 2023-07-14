@@ -28,15 +28,64 @@
   </div>
 </div>
 
+<!---- About ----->
+
 <div id=about>
   <div class="container">
     <div class="row">
-      <div class="about-col-1"></div>
-      <div class="about-col-1"></div>
+      <div class="about-col-1">
+        <img src="images/me.png">
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About me</h1>
+        <p>Some amazing stuff about me</p>
+
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+          <p class="tab-links" onclick="opentab('experience')">Experience</p>
+          <p class="tab-links" onclick="opentab('education')">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>Primo</span><br>primo contenuto</li>
+            <li><span>Secondo</span><br>secondo contenuto</li>
+            <li><span>Terzo</span><br>terzo contenuto</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>Primo</span><br>primo esperienza</li>
+            <li><span>Secondo</span><br>secondo esperienza</li>
+            <li><span>Terzo</span><br>terzo esperienza</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>Primo</span><br>primo educazione</li>
+            <li><span>Secondo</span><br>secondo educazione</li>
+            <li><span>Terzo</span><br>terzo educazione</li>
+          </ul>
+        </div>
+      </div>
   </div>
 </div>
 
+<script>
+  var tablinks=document.getElementsByClassName("tab-links")
+  var tabcontents=document.getElementsByClassName("tab-contents")
 
+  function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link")
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab")
+    }
+
+    event.currentTarget.classList.add("active-link")
+    document.getElementById(tabname).classList.add("active-tab")   
+  }
+</script>
 
 </body>
 </html>
